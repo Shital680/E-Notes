@@ -1,0 +1,282 @@
+@charset "ISO-8859-1";
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.all{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background-image: url(images/taking-notes-1.jpg);
+	background-size: cover;
+}
+.container{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background-size: cover;
+	background-image: url(images/backgroundproject.jpg);
+}
+.second{
+	height: 380px;
+	width: 380px;
+	background-color: lightblue;
+	margin: 6% auto;
+	padding: 5px;
+	border-radius: 10px;
+}
+.second1{
+	height: 280px;
+	width: 330px;
+	background-color: lightblue;
+	margin: 6% auto;
+	padding: 5px;
+	border-radius: 10px;
+}
+
+.heading{
+	text-align: center;
+	border: 1px solid lightblue;
+	margin: 15px 80px;
+	border-radius: 45px;
+	background-color: rgba(0,200,0,0.5);
+	font-size: 15px;
+	padding: 6px;
+	
+}
+
+.input-icons {
+	text-align: center;
+	padding: 2px;
+	}
+
+
+input[type="text"],input[type="email"],input[type="password"]{
+	border: 1px solid grey;
+	
+	padding: 5px;
+	font-size: 15px;
+}
+
+
+
+.register{
+	text-align: center;
+	margin: auto;
+	display: flex;
+	display: grid;
+	padding: 5px 20px;
+	border-radius: 10px ;
+	background-color: rgba(65,220,0,0.6);
+	font-size: 15px;
+}
+
+.member{
+	text-align: center;
+	font-size: 15px;
+}
+
+i{
+	
+  padding: 10px;
+  background: lightblue;
+  color: black;
+  min-width: 20px;
+  text-align: center;
+}
+.main{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background-image: url(images/taking-notes-1.jpg);
+	background-size: cover;
+	
+
+}
+
+#sidebar a{
+  position: absolute;
+  transition: 0.3s;
+  padding: 10px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+
+
+#home{
+	top: 20px;
+	background-color: green;
+}
+
+#add {
+  top: 80px;
+  background-color: rgb(193, 230, 47);
+}
+
+#sidebar2 a{
+  position: relative;
+  transition: 0.3s;
+  padding: 10px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 5px 0 0 5px;
+  float: right;
+}
+
+
+#logout {
+  top: 15px;
+  background-color: #0c7edc;
+  
+}
+
+.title{
+	width: 500px;
+}
+
+.note{
+	width: 700px;
+}
+
+
+.title, .note{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 100px;
+	border-radius: 9px;
+	padding: 10px;
+}
+
+.a{
+	text-align: center;
+	display: flex;
+	display: grid;
+	padding: 5px 20px;
+	border-radius: 10px ;
+	background-color: rgba(65,220,0,0.6);
+	position: relative;
+	top:108px;
+	font-size: 15px;
+	margin: auto;
+}
+
+.a1{
+	text-decoration: none;
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	padding: 5px 20px;
+	border-radius: 10px ;
+	background-color: rgba(65,220,0,0.6);
+	top: 15px;
+	left: 140px;
+	font-size: 15px;
+	
+}
+
+.a2{
+	text-decoration: none;
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	padding: 5px 20px;
+	border-radius: 10px ;
+	background-color: red;
+	bottom: 14px;
+	left: 240px;
+	font-size: 15px;
+}
+
+.title11{
+	width: 300px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 100px;
+	left: 48px;
+	border-radius: 9px;
+	padding: 5px;
+}
+
+.note12{
+	width: 300px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 100px;
+	border-radius: 9px;
+	padding: 5px;
+	
+}
+
+.view1{
+	width: 300px;
+	display: inline-block;
+	position: relative;
+	border-radius: 10px;
+	left: 80px;
+	top: 10px;
+	margin-left: 10px;
+	margin-top: 15px;
+	padding: 5px;
+}
+
+.view2{
+	width: 300px;
+	display: inline-block;
+	position: relative;
+	border-radius: 10px;
+	left: 80px;
+	top: 23px;
+	margin-left: 10px;
+	margin-top: 15px;
+	padding: 5px;
+}
+
+.viewall{
+	text-align: center;
+	position: relative;
+	top: 10px;
+}
+
+.editinput{
+	text-align: center;
+	margin: auto;
+	display: flex;
+	display: grid;
+	padding: 5px 20px;
+	border-radius: 10px ;
+	background-color: rgba(65,220,0,0.6);
+	font-size: 15px;
+	position: relative;
+	top: 85px;
+}
+
+p{
+	text-align: center;
+	position: absolute;
+	color: red;
+	top: 50px;
+}
+
+.alert{
+	font-size: 30px;
+	color: red;
+	text-align: center;
+	
+	
+}
+
