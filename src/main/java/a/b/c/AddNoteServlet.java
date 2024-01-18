@@ -33,7 +33,7 @@ public class AddNoteServlet extends HttpServlet {
 			int status=DatabaseAllOperations.add(u);
 			
 			if(status > 0) {
-				request.getRequestDispatcher("add.html").include(request, response);
+				response.sendRedirect("ViewNoteServlet");
 			}
 			else {
 				p.println("<p>Unable to save</p>");
