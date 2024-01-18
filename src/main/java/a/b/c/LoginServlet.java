@@ -22,9 +22,13 @@ public class LoginServlet extends HttpServlet {
 		String password=request.getParameter("password");
 	
 		if(DatabaseAllOperations.validate(email,password)) {
-			//RequestDispatcher rd=request.getRequestDispatcher("ViewNoteServlet");
-		 response.sendRedirect("ViewNoteServlet");
-			//rd.forward(request,response);
+			//session to get currently logged in user
+			String userEmail = email;
+			HttpSession session = request.getSession();
+			session.setAttribute("userEmail", userEmail);
+			
+		 	response.sendRedirect("ViewNoteServlet");
+			
 			
 		}else {
 			p.print("<head>");

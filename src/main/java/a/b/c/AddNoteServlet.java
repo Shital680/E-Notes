@@ -16,11 +16,16 @@ public class AddNoteServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter p=response.getWriter();
+
+		HttpSession session = request.getSession();
+		String receivedData = (String) session.getAttribute("userEmail");
 		
+		String email=receivedData;
 		String Title=request.getParameter("title");
 		String Note=request.getParameter("note");
 		
 		UserDetails u=new UserDetails();
+		u.setEmail(email);
 		u.setTitle(Title);
 		u.setNote(Note);
 		
@@ -28,7 +33,7 @@ public class AddNoteServlet extends HttpServlet {
 			int status=DatabaseAllOperations.add(u);
 			
 			if(status > 0) {
-				request.getRequestDispatcher("add.html").include(request, response);
+				response.sendRedirect("ViewNoteServlet");
 			}
 			else {
 				p.println("<p>Unable to save</p>");

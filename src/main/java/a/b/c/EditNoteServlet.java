@@ -22,7 +22,7 @@ public class EditNoteServlet extends HttpServlet {
 //		
 //		UserDetails u=DatabaseAllOperations.getUserById(id);
 		try {
-			List<UserDetails> li=DatabaseAllOperations.getAllNotes();
+			
 			p.print("<head>");
 			p.print("<link rel='stylesheet' href='styles.css'>");
 			p.print("</style>");
