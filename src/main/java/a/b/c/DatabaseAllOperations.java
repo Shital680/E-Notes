@@ -74,10 +74,11 @@ public class DatabaseAllOperations {
 		int status=0;
 		try {
 			Connection conn=DatabaseAllOperations.getconnection();
-			PreparedStatement ps=conn.prepareStatement("Insert into pro_table1(title, note) values(?,?)");
+			PreparedStatement ps=conn.prepareStatement("Insert into pro_table1(title, note,email) values(?,?,?)");
 			
 			ps.setString(1, u.getTitle());
 			ps.setString(2, u.getNote());
+			ps.setString(2, u.getEmail());
 			status=ps.executeUpdate();
 			conn.close();
 		}catch(Exception e1) {
