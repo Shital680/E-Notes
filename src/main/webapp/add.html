@@ -18,11 +18,10 @@
 	 </div>
 </div>
 <form action="AddNoteServlet" method="post">
-
- <input class="title" type="text" name="title" placeholder="Enter title here" id="title1" name="title"><br>
- 
-  <textarea class="note" name="note" rows="10" cols="70" placeholder="Enter Note here...." id="note1" name="note"></textarea> 
-<input class="a" type="submit" value="Add Note">
+	<input class="title" type="hidden" name="email" placeholder="Enter title here" id="title1" ><br>
+ 	<input class="title" type="text" name="title" placeholder="Enter title here" id="title1" required><br>
+  	<textarea class="note" name="note" rows="10" cols="70" placeholder="Enter Note here...." id="note1" required></textarea> 
+	<input class="a" type="submit" value="Add Note">
 </form>
 
 </body>
