@@ -20,7 +20,11 @@ public class ViewNoteServlet extends HttpServlet {
 		
 		
 		try {
-			List<UserDetails> li=DatabaseAllOperations.getAllNotes();
+			HttpSession session = request.getSession();
+			String receivedData = (String) session.getAttribute("userEmail");
+			
+			List<UserDetails> li=DatabaseAllOperations.getNotesByUsername(receivedData);
+			
 			p.print("<head>");
 			p.print("<link rel='stylesheet' href='styles.css'>");
 			p.print("</head>");
