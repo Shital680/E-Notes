@@ -86,18 +86,22 @@ public class DatabaseAllOperations {
 		return status;
 }
 	
-	public static List<UserDetails> getAllNotes() throws SQLException {
+	public static List<UserDetails> getNotesByUsername(String email) throws SQLException {
+		
 		List<UserDetails> li=new ArrayList<UserDetails>();
 		try {
 		Connection conn=DatabaseAllOperations.getconnection();
-		PreparedStatement ps=conn.prepareStatement("Select * from pro_table1");
+		PreparedStatement ps=conn.prepareStatement("Select * from pro_table1 where email=?");
+		ps.setString(1, email);
 		
 		ResultSet rs=ps.executeQuery();
 		while(rs.next()) {
 			UserDetails s1=new UserDetails();
+			
 			s1.setId(rs.getInt(1));
 			s1.setTitle(rs.getString(2));
 			s1.setNote(rs.getString(3));
+			s1.setEmail(rs.getString(4));
 	
 			
 			li.add(s1);
@@ -106,8 +110,7 @@ public class DatabaseAllOperations {
 			e2.printStackTrace();
 		}
 		return li;
-		
-	}
+}
 	
 	public static UserDetails getUserById(int id) {
 		UserDetails u=new UserDetails();
